@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+//Exercise.. create a MyLearning component to print out a paragraph describing what new things
+//you've learned in this course so far.
+
 function CountCard() {
   const [count, setCount] = useState(0)
   return (
