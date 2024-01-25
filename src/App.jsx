@@ -6,6 +6,8 @@ import './App.css'
 //Exercise.. create a MyLearning component to print out a paragraph describing what new things
 //you've learned in this course so far.
 
+//Exercise.. create User component and define userData obj to output dynamic values 
+
 const greetings = ["Hola!", "Hi!", "Bonjour!"]; 
 
 function DisplayRandomGreetings () {
