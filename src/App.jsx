@@ -6,6 +6,22 @@ import './App.css'
 //Exercise.. create a MyLearning component to print out a paragraph describing what new things
 //you've learned in this course so far.
 
+const greetings = ["Hola!", "Hi!", "Bonjour!"]; 
+
+function DisplayRandomGreetings () {
+  const [greet, setGreetingMessage] = useState("Hello World!")
+  return  (
+    <div className="card">
+     <button onClick={() => setGreetingMessage(greetings[Math.floor(Math.random() * greetings.length)])}>
+      Greeting of the day: {greet}
+    </button>
+    <p>
+      Edit <code>src/App.jsx</code> and save to test HMR
+    </p>
+  </div>
+  )
+}
+
 function CountCard() {
   const [count, setCount] = useState(0)
   return (
@@ -34,7 +50,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <CountCard />
+      <DisplayRandomGreetings />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
