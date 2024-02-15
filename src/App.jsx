@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactImg from './assets/react-core-concepts.png'
 import './App.css'
 
 //Exercise.. create a MyLearning component to print out a paragraph describing what new things
@@ -13,7 +12,7 @@ import './App.css'
 function CoreConcepts (props) {
   return (
     <li>
-      <img src={props.image} alt={props.title} />
+      <img src={props.image} alt={props.title} width="200" height="200" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
     </li>
@@ -60,7 +59,7 @@ function App() {
         <ul>
         <CoreConcepts title = "Components" 
                       description = "The Core UI Building Block" 
-                      image = {reactLogo}
+                      image = {reactImg}
         />
         <CoreConcepts />
         <CoreConcepts />
