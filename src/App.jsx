@@ -30,6 +30,17 @@ function App() {
     console.log(selectedTopic);
   }
 
+  let tabContent = 'Please click a button';
+  if (selectedTopic) {
+    tabContent =  <div id="tab-content">
+                    <h3>{EXAMPLES[selectedTopic].title}</h3>
+                    <p>{EXAMPLES[selectedTopic].description}</p>
+                    <pre>
+                      <code>{EXAMPLES[selectedTopic].code}</code>
+                    </pre>
+                  </div>
+  }
+
   return (
     <>
       <div>
@@ -50,14 +61,7 @@ function App() {
             <TabButton onSelect={() => selectHandler('props')}>Props</TabButton>
             <TabButton onSelect={() => selectHandler('state')}>State</TabButton>
           </menu>
-          {!selectedTopic ? <p>Please click a button</p> 
-                          : <div id="tab-content">
-                              <h3>{EXAMPLES[selectedTopic].title}</h3>
-                              <p>{EXAMPLES[selectedTopic].description}</p>
-                              <pre>
-                                <code>{EXAMPLES[selectedTopic].code}</code>
-                              </pre>
-                            </div>}
+          {tabContent}
         </section>
       </div>
       <h1>Using Props - Core Concepts</h1>
