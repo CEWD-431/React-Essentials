@@ -4,6 +4,7 @@ import TabButton from './components/TabButton';
 import DisplayRandomGreetings from './components/DisplayRandomGreetings';
 import {CORE_CONCEPTS} from './components/data';
 import './App.css';
+import { useState } from 'react';
 
 
 function CountCard() {
@@ -22,11 +23,11 @@ function CountCard() {
 
 
 function App() {
-  let tabContent = "Please click a button";
+  const [ selectedTopic, setSelectedTopic ] = useState("Please click a button");
   function selectHandler (selectedButton) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
-    tabContent = selectedButton;
-    console.log(tabContent);
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
   }
 
   return (
@@ -49,7 +50,7 @@ function App() {
             <TabButton onSelect={() => selectHandler('props')}>Props</TabButton>
             <TabButton onSelect={() => selectHandler('state')}>State</TabButton>
           </menu>
-          {tabContent}
+          {selectedTopic}
         </section>
       </div>
       <h1>Using Props - Core Concepts</h1>
