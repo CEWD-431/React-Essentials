@@ -22,8 +22,9 @@ function CountCard() {
 
 
 function App() {
-  function selectHandler () {
-    console.log("Hello Wolrd - selected!");
+  function selectHandler (selectedButton) {
+    // selectedButton => 'components', 'jsx', 'props', 'state'
+    console.log(selectedButton);
   }
 
   return (
@@ -41,10 +42,10 @@ function App() {
         <section id = "examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={selectHandler}>Components</TabButton>
-            <TabButton onSelect={selectHandler}>JSX</TabButton>
-            <TabButton onSelect={selectHandler}>Props</TabButton>
-            <TabButton onSelect={selectHandler}>State</TabButton>
+            <TabButton onSelect={() => selectHandler('components')}>Components</TabButton>
+            <TabButton onSelect={() => selectHandler('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => selectHandler('props')}>Props</TabButton>
+            <TabButton onSelect={() => selectHandler('state')}>State</TabButton>
           </menu>
           Dynamic Content
         </section>
