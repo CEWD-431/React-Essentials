@@ -8,6 +8,19 @@ import './App.css'
 
 //Exercise.. create User component and define userData obj to output dynamic values 
 
+
+
+function CoreConcepts (props) {
+  return (
+    <li>
+      <img src='...' alt='...' />
+      <h3>TITLE</h3>
+      <p>DESCRIPTION</p>
+    </li>
+  );
+}
+
+
 const greetings = ["Hola!", "Hi!", "Bonjour!"]; 
 
 function DisplayRandomGreetings () {
@@ -44,18 +57,17 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" /> {/* setting HTML attributes dynamically */}
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <ul>
+        <CoreConcepts title = "Components" 
+                      description = "The Core UI Building Block" 
+                      image = {reactLogo}
+        />
+        <CoreConcepts />
+        <CoreConcepts />
+        <CoreConcepts />
+        </ul>
       </div>
       <h1>Vite + React</h1>
-      <DisplayRandomGreetings />
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
