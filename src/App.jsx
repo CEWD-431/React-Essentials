@@ -45,13 +45,8 @@ function App() {
     <>
       <div>
         <section id = "core-concepts">
-          <CoreConcepts title = {CORE_CONCEPTS[0].title} 
-                        description = {CORE_CONCEPTS[0].description} 
-                        image = {CORE_CONCEPTS[0].image} 
-          />
-          <CoreConcepts {...CORE_CONCEPTS[1]} />
-          <CoreConcepts {...CORE_CONCEPTS[2]} />
-          <CoreConcepts {...CORE_CONCEPTS[3]} />
+          <h2>Core Concepts</h2>
+          {CORE_CONCEPTS.map((coreConceptItem) =>  <CoreConcepts {...coreConceptItem} />)}
         </section>
         <section id = "examples">
           <h2>Examples</h2>
@@ -64,7 +59,7 @@ function App() {
           {tabContent}
         </section>
       </div>
-      <h1>Using Props - Core Concepts</h1>
+      <h1>Basic React App</h1>
     </>
   )
 }
