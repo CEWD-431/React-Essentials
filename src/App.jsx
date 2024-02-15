@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactImg from './assets/react-core-concepts.png'
 import './App.css'
+import { CORE_CONCEPTS } from './data'
 
 //Exercise.. create a MyLearning component to print out a paragraph describing what new things
 //you've learned in this course so far.
@@ -8,14 +9,13 @@ import './App.css'
 //Exercise.. create User component and define userData obj to output dynamic values 
 
 
-
 function CoreConcepts (props) {
   return (
-    <li>
+    <div>
       <img src={props.image} alt={props.title} width="200" height="200" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
-    </li>
+    </div>
   );
 }
 
@@ -56,15 +56,22 @@ function App() {
   return (
     <>
       <div>
-        <ul>
-        <CoreConcepts title = "Components" 
-                      description = "The Core UI Building Block" 
-                      image = {reactImg}
+        <CoreConcepts title = {CORE_CONCEPTS[0].title} 
+                      description = {CORE_CONCEPTS[0].description} 
+                      image = {CORE_CONCEPTS[0].image} 
         />
-        <CoreConcepts />
-        <CoreConcepts />
-        <CoreConcepts />
-        </ul>
+        <CoreConcepts title = {CORE_CONCEPTS[1].title} 
+                      description = {CORE_CONCEPTS[1].description} 
+                      image = {CORE_CONCEPTS[1].image} 
+        />
+        <CoreConcepts title = {CORE_CONCEPTS[2].title} 
+                      description = {CORE_CONCEPTS[2].description} 
+                      image = {CORE_CONCEPTS[2].image} 
+        />
+        <CoreConcepts title = {CORE_CONCEPTS[3].title} 
+                      description = {CORE_CONCEPTS[3].description} 
+                      image = {CORE_CONCEPTS[3].image} 
+        />
       </div>
       <h1>Using Props - Core Concepts</h1>
     </>
