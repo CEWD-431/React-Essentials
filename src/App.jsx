@@ -22,9 +22,11 @@ function CountCard() {
 
 
 function App() {
+  let tabContent = "Please click a button";
   function selectHandler (selectedButton) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
-    console.log(selectedButton);
+    tabContent = selectedButton;
+    console.log(tabContent);
   }
 
   return (
@@ -47,7 +49,7 @@ function App() {
             <TabButton onSelect={() => selectHandler('props')}>Props</TabButton>
             <TabButton onSelect={() => selectHandler('state')}>State</TabButton>
           </menu>
-          Dynamic Content
+          {tabContent}
         </section>
       </div>
       <h1>Using Props - Core Concepts</h1>
