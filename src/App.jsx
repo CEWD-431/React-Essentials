@@ -22,6 +22,9 @@ function CountCard() {
 
 
 function App() {
+  function selectHandler () {
+    console.log("Hello Wolrd - selected!");
+  }
 
   return (
     <>
@@ -38,11 +41,12 @@ function App() {
         <section id = "examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={selectHandler}>Components</TabButton>
+            <TabButton onSelect={selectHandler}>JSX</TabButton>
+            <TabButton onSelect={selectHandler}>Props</TabButton>
+            <TabButton onSelect={selectHandler}>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </div>
       <h1>Using Props - Core Concepts</h1>
