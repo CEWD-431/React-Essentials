@@ -13,9 +13,9 @@ import './App.css'
 function CoreConcepts (props) {
   return (
     <li>
-      <img src='...' alt='...' />
-      <h3>TITLE</h3>
-      <p>DESCRIPTION</p>
+      <img src={props.image} alt={props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
     </li>
   );
 }
@@ -67,7 +67,7 @@ function App() {
         <CoreConcepts />
         </ul>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Using Props - Core Concepts</h1>
     </>
   )
 }
