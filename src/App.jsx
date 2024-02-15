@@ -23,7 +23,7 @@ function CountCard() {
 
 
 function App() {
-  const [ selectedTopic, setSelectedTopic ] = useState("components");
+  const [ selectedTopic, setSelectedTopic ] = useState();
   function selectHandler (selectedButton) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
     setSelectedTopic(selectedButton);
@@ -50,13 +50,14 @@ function App() {
             <TabButton onSelect={() => selectHandler('props')}>Props</TabButton>
             <TabButton onSelect={() => selectHandler('state')}>State</TabButton>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {!selectedTopic ? <p>Please click a button</p> 
+                          : <div id="tab-content">
+                              <h3>{EXAMPLES[selectedTopic].title}</h3>
+                              <p>{EXAMPLES[selectedTopic].description}</p>
+                              <pre>
+                                <code>{EXAMPLES[selectedTopic].code}</code>
+                              </pre>
+                            </div>}
         </section>
       </div>
       <h1>Using Props - Core Concepts</h1>
