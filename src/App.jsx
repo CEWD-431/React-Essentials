@@ -1,9 +1,9 @@
 
 import CoreConcepts from './components/CoreConcepts';
 import Examples from './components/Examples';
+import Section from './components/Section';
 import { CORE_CONCEPTS } from './components/data';
 import './App.css';
-import { useState } from 'react';
 
 // function CountCard() {
 //   const [count, setCount] = useState(0)
@@ -24,10 +24,9 @@ function App() {
   return (
     <>
       <div>
-        <section id = "core-concepts">
-          <h2>Core Concepts</h2>
+        <Section id = "core-concepts">
           {CORE_CONCEPTS.map((coreConceptItem) =>  <CoreConcepts key={coreConceptItem.title} {...coreConceptItem} />)}
-        </section>
+        </Section>
         <Examples/>
       </div>
       <h1>Basic React App</h1>
