@@ -23,12 +23,10 @@ import './App.css';
 function App() {
   return (
     <>
-      <div>
-        <Section id = "core-concepts">
-          {CORE_CONCEPTS.map((coreConceptItem) =>  <CoreConcepts key={coreConceptItem.title} {...coreConceptItem} />)}
-        </Section>
-        <Examples/>
-      </div>
+      <Section title="Core Concepts" id = "core-concepts">
+        {CORE_CONCEPTS.map((coreConceptItem) =>  <CoreConcepts key={coreConceptItem.title} {...coreConceptItem} />)}
+      </Section>
+      <Examples/>
       <h1>Basic React App</h1>
     </>
   )
